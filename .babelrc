@@ -1,0 +1,24 @@
+{
+    "presets": [
+        [
+            "@babel/preset-env",
+            {
+                "targets": {
+                    "node": "current"
+                }
+            },
+            "@babel/react"
+        ]
+    ],
+    "plugins": [
+        ["@babel/plugin-proposal-decorators", { "legacy": true }], //
+        ["@babel/plugin-proposal-class-properties", { "loose": true }],
+        "@babel/plugin-proposal-function-bind",
+        [
+            "@babel/plugin-transform-runtime",
+            {
+                "regenerator": true // FIX REGENERATOR NOT DEFINED IN SAGA
+            }
+        ]
+    ]
+}
